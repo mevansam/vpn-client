@@ -4,6 +4,9 @@ set -eo pipefail
 
 root_dir=$(cd $(dirname $BASH_SOURCE)/.. && pwd)
 
+[[ ! -e ${root_dir}/build/bin/ovpn3-test-client ]] || \
+  exit 0
+
 #
 # OpenVPN3 Build Variables
 #
@@ -41,7 +44,8 @@ source $O3/core/vars/vars-osx64
 source $O3/core/vars/setpath
 
 pushd $O3/core/test/ovpncli
-  MTLS=1 LZ4=1 ASIO=1 build cli
+  DEBUG=1 MTLS=1 LZ4=1 ASIO=1 build cli
   mkdir -p ${root_dir}/build/bin
   mv cli ${root_dir}/build/bin/ovpn3-test-client
+  mv cli.dSYM ${root_dir}/build/bin/ovpn3-test-client.dSYM
 popd
