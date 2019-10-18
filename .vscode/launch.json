@@ -1,0 +1,93 @@
+{
+  "version": "2.0.0",
+  "configurations": [
+    {
+      "name": "debug vpn client",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "build vpn client",
+      "internalConsoleOptions": "openOnSessionStart",
+      "logging": {
+        "moduleLoad": false,
+        "programOutput": true,
+        "trace": false
+      },
+      "showDisplayString": false,
+      "externalConsole": true,
+      "osx": {
+        "MIMode": "lldb"
+      },
+      "program": "${workspaceFolder}/build/bin/vpn-client",
+      "args": [],
+      "environment": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false
+    },
+    {
+      "name": "debug ovpn3 test client",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "build ovpn3 test client",
+      "internalConsoleOptions": "openOnSessionStart",
+      "logging": {
+        "moduleLoad": false,
+        "programOutput": true,
+        "trace": false
+      },
+      "showDisplayString": false,
+      "externalConsole": true,
+      "osx": {
+        "MIMode": "lldb"
+      },
+      "program": "${workspaceFolder}/build/bin/ovpn3-test-client",
+      "args": [],
+      "environment": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false
+    },
+    {
+      "name": "debug rawtunnel cli",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "build rawtunnel cli",
+      "internalConsoleOptions": "openOnSessionStart",
+      "logging": {
+        "moduleLoad": false,
+        "programOutput": true,
+        "trace": false
+      },
+      "showDisplayString": false,
+      "externalConsole": true,
+      "osx": {
+        "MIMode": "lldb"
+      },
+      "program": "${workspaceFolder}/build/bin/rawtunnel",
+      "args": [],
+      "environment": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false
+    },
+    {
+      "name": "debug udptunnel cli",
+      "type": "cppdbg",
+      "request": "launch",
+      "preLaunchTask": "build udptunnel cli",
+      "internalConsoleOptions": "openOnSessionStart",
+      "logging": {
+        "moduleLoad": false,
+        "programOutput": true,
+        "trace": false
+      },
+      "showDisplayString": false,
+      "externalConsole": true,
+      "osx": {
+        "MIMode": "lldb"
+      },
+      "program": "${workspaceFolder}/build/bin/udptunnel",
+      "args": [],
+      "environment": [],
+      "cwd": "${workspaceFolder}",
+      "stopAtEntry": false
+    }
+  ]
+}

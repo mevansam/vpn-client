@@ -1,0 +1,85 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "build vpn client",
+      "command": "/usr/bin/clang++",
+      "args": [
+        "-v",
+        "-g",
+        "${workspaceFolder}/src/client/client.cpp",
+        "-o",
+        "${workspaceFolder}/build/bin/vpn-client",
+        "--debug"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "build ovpn3 test client",
+      "command": "/bin/sh",
+      "args": [
+        "-c",
+        "${workspaceFolder}/scripts/build-ovpn3-osx.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "build rawtunnel cli",
+      "command": "/bin/sh",
+      "args": [
+        "-c",
+        "${workspaceFolder}/scripts/build-rawtunnel-mp-osx.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "type": "shell",
+      "label": "build udptunnel cli",
+      "command": "/bin/sh",
+      "args": [
+        "-c",
+        "${workspaceFolder}/scripts/build-udptunnel-os.sh"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
